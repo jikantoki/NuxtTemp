@@ -50,7 +50,7 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en',
+      lang: 'jp',
     },
   },
 
@@ -78,4 +78,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  // デバッグ用のポートを変更
+  server: {
+    port: 12345,
+  },
 }
