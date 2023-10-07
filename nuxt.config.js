@@ -1,6 +1,10 @@
 import colors from 'vuetify/es5/util/colors'
 
+require('dotenv').config()
 export default {
+  config: {
+    env: process.env,
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - NuxtTemp',
@@ -29,12 +33,31 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    '@nuxtjs/dotenv',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    //ここからは自分で付け足したもの
+    [
+      'nuxt-i18n',
+      {
+        locales: [
+          { code: 'ja', name: 'Japanese', iso: 'ja_JP', file: 'ja.json' },
+          { code: 'en', name: 'English', iso: 'en_US', file: 'en.json' },
+        ],
+        defaultLocale: 'ja',
+        langDir: 'locales/',
+        strategy: 'no_prefix',
+        vueI18n: {
+          fallbackLocale: 'en',
+        },
+        vueI18nLoader: true,
+        lazy: true, //遅延読み込み
+      },
+    ],
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
