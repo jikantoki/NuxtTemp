@@ -14,6 +14,10 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
+      { name: 'mobile-web-app-capable', content: 'yes' },
+      { name: 'apple-mobile-web-app-capable', content: 'yes' },
+      { name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
+      { name: 'apple-mobile-web-app-title', content: 'APP_TITLE' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
@@ -33,6 +37,7 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
   ],
 
@@ -71,9 +76,17 @@ export default {
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
+  /** PWAのアイコンは/static/default.pngを自動で使う */
   pwa: {
     manifest: {
       lang: 'jp',
+      name: 'Nuxt Template',
+      short_name: 'NuxTmp',
+      description: 'Nuxtのアプリを簡単に構築',
+      display: 'standalone',
+      scope: '/',
+      start_url: '/',
+      icons: [],
     },
   },
 

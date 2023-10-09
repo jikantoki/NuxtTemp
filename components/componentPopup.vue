@@ -5,7 +5,7 @@
     .text-h6.dont-swipe {{ title }}
     p.pop-content.my-4.dont-swipe(v-html="message")
     .actions
-      v-btn.pop-btns.dont-swipe(v-for="action in actions" :key="key" @click="isShow=false;popClick(key)" v-bind:class="[key === 0 ? 'first' : 'other']") {{ action.text }}
+      v-btn.pop-btns.dont-swipe(v-for="(action,key) in actions" :key="key" @click="isShow=false;popClick(key)" v-bind:class="[key === 0 ? 'first' : 'other']") {{ action.text }}
 </template>
 <script>
 export default {

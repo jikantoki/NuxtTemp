@@ -2,8 +2,10 @@
 .header
   v-app-bar
     template(v-slot:append)
-      v-btn(icon="mdi-magnify")
-      v-btn(icon="mdi-dots-vertical")
+      v-btn(icon=true) hgiuoeeg
+        v-icon mdi-magnify
+      v-btn(icon=true) yhewhwer
+        v-icon mdi-dots-vertical
     v-app-bar-nav-icon(v-if="isRoot" @click="toggleDrawer()")
     v-btn(v-if="!isRoot" icon=true @click="back()")
       v-icon mdi-keyboard-backspace
@@ -56,7 +58,7 @@ export default {
       group: 1,
       isRoot: false,
       theme: 'light',
-      isDarkTheme: false
+      isDarkTheme: false,
     }
   },
   watch: {
@@ -79,7 +81,7 @@ export default {
         MetaFunctions.setStatusColor('#FFFFFF')
         localStorage.theme = 'light'
       }
-    }
+    },
   },
   mounted() {
     const now = new URL(window.location.href)
@@ -243,8 +245,8 @@ export default {
         return 0
       }
     },
-    changeTheme() {}
-  }
+    changeTheme() {},
+  },
 }
 </script>
 
@@ -255,6 +257,7 @@ export default {
   cursor: pointer;
   display: flex;
   align-items: center;
+  margin-bottom: 0;
 }
 .text-none {
   font-weight: normal;
@@ -264,8 +267,7 @@ export default {
 }
 .ripple {
   &:hover {
-    box-shadow:
-      0px 2px 4px -1px var(--v-shadow-key-umbra-opacity, rgba(0, 0, 0, 0.2)),
+    box-shadow: 0px 2px 4px -1px var(--v-shadow-key-umbra-opacity, rgba(0, 0, 0, 0.2)),
       0px 4px 5px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.14)),
       0px 1px 10px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.12));
   }
