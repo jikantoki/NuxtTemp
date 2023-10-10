@@ -2,21 +2,21 @@ export default [
   {
     name: 'HOME',
     url: '/',
-    icon: 'mdi-home-outline'
+    icon: 'mdi-home-outline',
   },
   {
     name: 'ABOUT',
     url: '/about',
-    icon: 'mdi-information-outline'
+    icon: 'mdi-information-outline',
   },
   {
     name: 'Vuetify',
     url: '/vuetify',
-    icon: 'mdi-vuejs'
+    icon: 'mdi-vuejs',
   },
   {
     name: '404',
     url: '/hf8wehegiaohiedwhie',
-    icon: 'mdi-help-circle-outline'
-  }
+    icon: 'mdi-help-circle-outline',
+  },
 ]

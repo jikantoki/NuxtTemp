@@ -66,20 +66,20 @@ export default {
             this.$refs.componentPopup.pop(
               'ありがとうございます！',
               'プッシュ通知の許可に成功しました。',
-              [{ text: 'OK', return: 0 }]
+              [{ text: 'OK', return: 0 }],
             )
           } else {
             if (e === undefined) {
               this.$refs.componentPopup.pop(
                 'リクエスト失敗',
                 'ブラウザによって通知へのリクエストが拒否されています。',
-                [{ text: 'OK', return: 0 }]
+                [{ text: 'OK', return: 0 }],
               )
             } else {
               this.$refs.componentPopup.pop(
                 'リクエスト失敗',
                 `プッシュ通知の許可は、ブラウザから行う必要があります。\nこの端末で <span class="allow-select-all underline">https://${location.host}</span> にアクセスしてください。`,
-                [{ text: 'OK', return: 0 }]
+                [{ text: 'OK', return: 0 }],
               )
             }
           }
@@ -92,7 +92,7 @@ export default {
         this.$refs.componentPopup.pop(
           '通知を送信できませんでした',
           'プッシュ通知が許可されていないため、処理を完了できませんでした',
-          [{ text: 'OK', return: 0 }]
+          [{ text: 'OK', return: 0 }],
         )
         return false
       }

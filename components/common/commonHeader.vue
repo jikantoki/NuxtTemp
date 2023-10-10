@@ -142,7 +142,7 @@ export default {
         startX = e.touches[0].clientX
         startY = e.touches[0].clientY
       },
-      { passive: true }
+      { passive: true },
     )
 
     //移動した座標を取得
@@ -152,7 +152,7 @@ export default {
         endX = e.changedTouches[0].clientX
         endY = e.changedTouches[0].clientY
       },
-      { passive: true }
+      { passive: true },
     )
 
     //移動距離から左右or上下の処理を実行
@@ -267,7 +267,8 @@ export default {
 }
 .ripple {
   &:hover {
-    box-shadow: 0px 2px 4px -1px var(--v-shadow-key-umbra-opacity, rgba(0, 0, 0, 0.2)),
+    box-shadow:
+      0px 2px 4px -1px var(--v-shadow-key-umbra-opacity, rgba(0, 0, 0, 0.2)),
       0px 4px 5px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.14)),
       0px 1px 10px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.12));
   }
