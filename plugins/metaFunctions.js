@@ -37,7 +37,7 @@ export default {
       returnCode = 1
     }
     const metaProperty = document.querySelector(
-      'meta[property="' + metaKey + '"]'
+      'meta[property="' + metaKey + '"]',
     )
     if (metaProperty) {
       metaProperty.setAttribute('content', property)

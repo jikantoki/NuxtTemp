@@ -1,5 +1,6 @@
 <template lang="pug">
 .v-app-main-application
+  splash(v-show="splash")
   v-app.wrap100vh(ontouchstart="" style="min-height: 100vh!important;width:100vw")
     header
       common-header
@@ -22,6 +23,7 @@ import commonCookieGetPermission from '~/components/common/commonCookieGetPermis
 import componentPopup from '~/components/componentPopup'
 import mixins from '~/mixins/mixins'
 import webpush from '~/plugins/webpush'
+import splash from '~/components/common/commonSplash'
 
 export default {
   /**
@@ -36,6 +38,7 @@ export default {
     commonFooter: commonFooter,
     commonCookieGetPermission: commonCookieGetPermission,
     popup: componentPopup,
+    splash: splash,
   },
   mixins: [mixins],
   /**
@@ -45,7 +48,9 @@ export default {
     /**
      * この中に書かないと使えない
      */
-    return {}
+    return {
+      splash: true,
+    }
   },
   /**
    * 監視したい変数を記述
@@ -83,6 +88,11 @@ export default {
       .catch((e) => {
         console.log(e)
       })
+
+    /**
+     * mountedの最後に記述
+     */
+    this.splash = false
   },
   /**
    * ページ離脱時にやりたい事
@@ -134,6 +144,9 @@ body {
   list-style: none;
   transition: all 0.14s;
   font-family: $font !important;
+}
+.v-app-main-application {
+  display: flex;
 }
 #app {
   font-family: $font !important;

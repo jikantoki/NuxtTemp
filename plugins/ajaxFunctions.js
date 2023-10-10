@@ -51,19 +51,19 @@ export default {
             try {
               response = {
                 body: JSON.parse(request.response),
-                isJSON: true
+                isJSON: true,
               }
             } catch {
               response = {
                 body: request.response,
-                isJSON: false
+                isJSON: false,
               }
             }
             response.ajaxInfo = {
               status: request.status,
               statusText: request.statusText,
               url: request.responseURL,
-              timeout: request.timeout
+              timeout: request.timeout,
             }
             resolve(response)
           } else {
@@ -72,8 +72,8 @@ export default {
                 status: request.status,
                 statusText: request.statusText,
                 url: request.responseURL,
-                timeout: request.timeout
-              }
+                timeout: request.timeout,
+              },
             })
           }
         }
@@ -96,9 +96,9 @@ export default {
       request.open(methods, url, true)
       request.setRequestHeader(
         'content-type',
-        'application/x-www-form-urlencoded;charset=UTF-8'
+        'application/x-www-form-urlencoded;charset=UTF-8',
       )
       request.send(postMethod)
     })
-  }
+  },
 }

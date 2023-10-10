@@ -26,7 +26,7 @@ export default {
 
           if (permission === 'denied') {
             console.warn(
-              'Push通知が拒否されているようです。ブラウザの設定からPush通知を有効化してください'
+              'Push通知が拒否されているようです。ブラウザの設定からPush通知を有効化してください',
             )
             reject(false)
           }

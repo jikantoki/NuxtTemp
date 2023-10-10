@@ -14,7 +14,7 @@
     "url": "git+ssh://git@github.com:jikantoki/NuxtTemp.git"
   },
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nuxt dev",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
@@ -27,23 +27,22 @@
     "@nuxt/content": "^1.0.0",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/dotenv": "^1.4.1",
-    "@nuxtjs/pwa": "^3.3.5",
     "@vue/cli-plugin-babel": "^5.0.8",
+    "@vue/server-renderer": "^3.3.4",
     "core-js": "^3.25.3",
     "eslint-plugin-prettier": "^5.0.0",
     "imports-loader": "^0.8.0",
-    "nuxt": "^2.15.8",
+    "nuxt": "^3.7.4",
     "nuxt-i18n": "^6.28.1",
     "pug": "^3.0.2",
     "pug-loader": "^2.4.0",
     "pug-plain-loader": "^1.1.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
-    "vue": "^2.7.10",
+    "vue": "^3.3.4",
     "vue-cli": "^2.9.6",
-    "vue-server-renderer": "^2.7.10",
     "vue-template-compiler": "^2.7.10",
-    "vuetify": "^2.6.10"
+    "vuetify": "^3.3.20"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.19.1",
