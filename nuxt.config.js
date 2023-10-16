@@ -7,8 +7,8 @@ export default {
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - NuxtTemp',
-    title: 'NuxtTemp',
+    titleTemplate: '%s - NuxTemp',
+    title: 'NuxTemp',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
